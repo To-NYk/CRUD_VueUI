@@ -7,10 +7,8 @@
                         <i class="fa fa-plus-square" aria-hidden="true"></i> Добавить
                     </router-link>
                 </p>
-                <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit modi eaque sunt
-                    officiis possimus dignissimos consequatur temporibus sint nemo, corrupti laudantium culpa. Saepe
-                    perspiciatis eligendi, similique dolore aperiam quasi deserunt? Nostrum molestiae libero modi vero!
-                </p>
+                <br />
+                <br />
                 <form>
                     <div class="row">
                         <div class="col">
@@ -115,10 +113,10 @@ export default {
         }
     },
     methods: {
-        clickDeleteContact : async function(contactId){
+        clickDeleteContact: async function (contactId) {
             try {
                 let response = await ContactService.deleteContact(contactId);
-                if(response){
+                if (response) {
                     let response = await ContactService.getAllContacts();
                     this.contacts = response.data;
                 }

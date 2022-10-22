@@ -5,6 +5,9 @@
 body {
     font-family: 'Merriweather', serif;
     background-color: #F6F3F3 !important;
+    content: "" ;
+    height: 0px ;
+
 
 }
 
@@ -21,3 +24,6 @@ body {
     
 }
 
+.loginForm {
+    background: url(https://azazeln28.neocities.org/codepen/image/image3.jpg);
+}

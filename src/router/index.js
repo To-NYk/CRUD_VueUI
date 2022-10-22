@@ -10,16 +10,17 @@ import Admin from '../views/Admin.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    redirect: '/contacts',    //Автоматом редиректает на главную
-    component: HomeView
-  },
-  {
     path: '/login',
     name: 'Admin',     //Эээм... полный список пользователей????
     component: Admin 
   },
+  {
+    path: '/',
+    name: 'home',
+        //Автоматом редиректает на главную
+    component: HomeView
+  },
+  
   {
     path: '/contacts',
     name: 'ContactsUser',     //Эээм... полный список пользователей????

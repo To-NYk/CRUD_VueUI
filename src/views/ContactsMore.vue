@@ -3,17 +3,15 @@
         <div class="row">
             <div class="col">
                 <p class="h3 text-success fw-bold">Просмотр профиля</p>
-                <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quaerat soluta
-                    itaque molestiae tenetur sed amet ullam, nesciunt sequi cumque minus, rerum sit. Autem, aliquid
-                    commodi. Dicta eaque corporis pariatur!</p>
+                <br />
+                <br />
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                <img :src="contact.photo"
-                    class="contact-img">
+                <img :src="contact.photo" class="contact-img">
             </div>
             <div class="col-md-6">
                 <ul class="list-group">
@@ -27,7 +25,8 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <router-link to="/" class="btn btn-success my-2"><i class="fa fa-arrow-right-circle-left"></i> Назад</router-link>
+                    <router-link to="/" class="btn btn-success my-2"><i class="fa fa-arrow-right-circle-left"></i> Назад
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -36,27 +35,27 @@
 </template>
 
 <script>
-import {ContactService} from '@/services/Service';
+import { ContactService } from '@/services/Service';
 
 export default {
     name: "ContactsMore",
-    data : function (){
+    data: function () {
         return {
             contactId: this.$route.params.contactId,
-            contact : {},
+            contact: {},
             errorMsg: null
         }
     },
-    created : async function (){
-       try {
-        let response = await ContactService.getContact(this.contactId);
-        this.contact = response.data;
-       }
-       catch (error){
-        this.errorMsg = error;
-       }
+    created: async function () {
+        try {
+            let response = await ContactService.getContact(this.contactId);
+            this.contact = response.data;
+        }
+        catch (error) {
+            this.errorMsg = error;
+        }
     }
-    
+
 }
 </script>
 
